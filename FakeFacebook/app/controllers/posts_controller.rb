@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     #@post = Post.find(params[:id]) #find recupera un post por su identificador (id)
-
+    @comment = Comment.new #creamos un comentario
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }

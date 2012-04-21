@@ -1,14 +1,26 @@
 <p id="notice"><%= notice %></p>
 
+
+<h2> Comments </h2>
+
+
+
 <p>
   <b>User:</b>
-  <%= @post.user %>
+  <%= @post.user_name %>
 </p>
 
 <p>
   <b>Body:</b>
   <%= @post.body %>
 </p>
+
+
+
+
+<%= render @post.comments  %>  
+
+
 <%= render 'comments/form' %>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
